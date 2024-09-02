@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/POM/4.0.0/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Identificadores del proyecto -->
+    <groupId>com.ejemplo</groupId>
+    <artifactId>mi-proyecto</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <!-- Nombre y URL del proyecto -->
+    <name>entregable1</name>
+    <url>http://maven.apache.org</url>
+
+    <!-- Configuración de la versión de Java -->
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source> <!-- Cambia según la versión de Java que estés usando -->
+        <maven.compiler.target>17</maven.compiler.target> <!-- Cambia según la versión de Java que estés usando -->
+    </properties>
+
+    <!-- Dependencias del proyecto -->
+    <dependencies>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.6.0</version> <!-- Usa la versión más reciente disponible -->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>10.15.2.0</version> <!-- Asegúrate de usar la última versión disponible -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Otras dependencias aquí -->
+    </dependencies>
+
+    <!-- Configuración de plugins -->
+    <build>
+        <plugins>
+            <!-- Plugin para compilar con la versión de Java -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version> <!-- Usa la versión más reciente disponible -->
+                <configuration>
+                    <source>17</source> <!-- Cambia según la versión de Java que estés usando -->
+                    <target>17</target> <!-- Cambia según la versión de Java que estés usando -->
+                </configuration>
+            </plugin>
+            <!-- Otros plugins aquí -->
+        </plugins>
+    </build>
+</project>
