@@ -171,7 +171,6 @@ public class GenericDAO<T, K> implements DAO<T, K> {
             T instance = type.getDeclaredConstructor().newInstance();
 
             for (Field field : type.getDeclaredFields()) {
-                System.out.println(field.getName());
                 field.setAccessible(true);
                 Object value = rs.getObject(field.getName());
                 field.set(instance, value);
@@ -180,5 +179,10 @@ public class GenericDAO<T, K> implements DAO<T, K> {
         } catch (SQLException | IllegalAccessException | NoSuchMethodException | InstantiationException | InvocationTargetException e) {
             throw new DAOException("Error al mapear el resultado", e);
         }
+    }
+
+    @Override
+    public void close() throws SQLException {
+        this.coneccion.close();
     }
 }

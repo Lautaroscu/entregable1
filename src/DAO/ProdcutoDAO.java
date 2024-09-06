@@ -48,6 +48,7 @@ public class ProdcutoDAO extends GenericDAO<Producto , Integer> {
                 String nombre = resultSet.getString("nombre");
                 float costo = resultSet.getFloat("valor");
                 Producto producto = new Producto(id, nombre , costo);
+                close();
                 return producto;
             }
 

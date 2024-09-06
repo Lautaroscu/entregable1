@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 
 public interface DAO<T , K>{
+ void close() throws SQLException;
+
 void delete(Map<String , K> id) throws DAOException;
 void save(T t) throws DAOException;
 T findById(Map<String , K> id) throws DAOException;
